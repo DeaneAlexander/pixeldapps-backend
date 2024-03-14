@@ -49,7 +49,8 @@ export async function getAccount(account_id: string, private_key: string) {
         networkId: "default",
         deps: { keyStore },
         masterAccount: account_id,
-        nodeUrl: config.nodeUrl
+        nodeUrl: config.nodeUrl,
+        headers: {}
     });
 
     return await near.account(account_id);
